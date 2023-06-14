@@ -55,16 +55,13 @@ describe("Doors",()=>{
               //Arrange
               const doors= new Array(5).fill('@') as TState[]
 
-              const hd = new RevolvingDoors(doors)
+              const hd = getRDwithDoors(5)
 
               //Act
               
               hd.toggleEvery(2)
 
               //Assert
-
-          //     const solution = new Array(5).fill('@').splice(1)
-              
               expect(hd.getDoors()).toStrictEqual(["@","H","@","H"])
 
           })
@@ -77,15 +74,13 @@ describe("Doors",()=>{
             it('should have all odd even doors closed `H` and odd doors open`@`',()=>{
                 
               //Arrange
-              const doors= new Array(5).fill('#') as TState[]
-
-              const hd = new RevolvingDoors(doors)
+               const rd = getRDwithDoors(5)
 
               //Act
-              hd.makePasses(2)
+              rd.makePasses(2)
     
               // Assert
-              expect(hd.getDoors()).toStrictEqual(['@','H','@','H'])
+              expect(rd.getDoors()).toStrictEqual(['@','H','@','H'])
             })
 
     })
@@ -95,15 +90,13 @@ describe("Doors",()=>{
             it('should have 2nd and 3rd door to holding state',()=>{
                 
               //Arrange
-              const doors= new Array(4).fill('#') as TState[]
-
-              const hd = new RevolvingDoors(doors)
+              const rd = getRDwithDoors(4)
 
               //Act
-              hd.makePasses(3)
+              rd.makePasses(3)
     
               // Assert
-              expect(hd.getDoors())
+              expect(rd.getDoors())
               .toStrictEqual(['@','H','H'])
               
             })
@@ -113,3 +106,11 @@ describe("Doors",()=>{
     
         
 })
+
+function getRDwithDoors(count:number) {
+     
+     const doors = new Array(count).fill('#') as TState[]
+
+     const hd = new RevolvingDoors(doors)
+     return hd
+}
