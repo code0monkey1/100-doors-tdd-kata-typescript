@@ -53,7 +53,6 @@ describe("Doors",()=>{
             it('should turn every 2nd  doors to `#`',()=>{
 
               //Arrange
-              const doors= new Array(5).fill('@') as TState[]
 
               const hd = getRDwithDoors(5)("@")
 
@@ -90,7 +89,8 @@ describe("Doors",()=>{
             it('should have 2nd and 3rd door to holding state',()=>{
                 
               //Arrange
-              const rd = getRDwithDoors(4)('#')
+              const fillWithChars = getRDwithDoors(4)
+              const rd=fillWithChars("#")
 
               //Act
               rd.makePasses(3)
