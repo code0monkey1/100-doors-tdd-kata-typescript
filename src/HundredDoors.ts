@@ -11,7 +11,7 @@ export default class HundredDoors implements IToggle{
    
         const currentState= this.doors[index]
 
-        this.doors[index]=HundredDoors.getNextState(currentState) as TState
+        this.doors[index]=HundredDoors.getNextState(currentState)
         
     }
 
@@ -52,7 +52,7 @@ export default class HundredDoors implements IToggle{
               return '#'
              default:
               const res:never = curr
-              return res
+              throw new Error("error: case not defined "+res)
               
          }
 
