@@ -63,7 +63,6 @@ describe("Doors",()=>{
               hd.makePasses(2)
     
               // Assert
-
               expect(hd.getDoors()).toStrictEqual(['@','#','@','#'])
             })
 
