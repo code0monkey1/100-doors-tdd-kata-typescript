@@ -9,7 +9,7 @@ export default class HundredDoors implements IToggle{
    
         const currentState= this.doors[index]
 
-        this.doors[index]=this.getNextState(currentState) as string
+        this.doors[index]=HundredDoors.getNextState(currentState) as string
         
     }
 
@@ -38,12 +38,13 @@ export default class HundredDoors implements IToggle{
         return  this.doors.slice(1)
       }
 
-     public  getNextState(curr:string):string|void{
+     public static  getNextState(curr:string):string|void{
 
         const nextState = new Map<string, string>([
           
           ['#', '@'],
-          ['@', '#']
+          ['@', 'H'],
+          ['H','#']
   
         ]);
 
