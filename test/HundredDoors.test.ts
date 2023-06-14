@@ -1,7 +1,8 @@
-import HundredDoors from "../src/RevolvingDoors"
+import RevolvingDoors from "../src/RevolvingDoors"
 import { TState } from "../src/types"
 
 describe("Doors",()=>{
+     
     
     describe('', () => {
          
@@ -9,17 +10,17 @@ describe("Doors",()=>{
 
           const doors=new Array(100).fill('#')  as TState[]
 
-           const hd = new HundredDoors(doors)
+           const hd = new RevolvingDoors(doors)
  
            expect(hd).toBeDefined()
 
          })
 
-         it('should have a `flip` function to flip the state of a door',()=>{
+         it('should have a `toggle` function to flip the state of a door',()=>{
 
               const doors= new Array(100).fill('#') as TState[]
 
-              const hd = new HundredDoors(doors)
+              const hd = new RevolvingDoors(doors)
 
               expect(hd.toggle).toBeInstanceOf(Function)
          })
@@ -34,7 +35,7 @@ describe("Doors",()=>{
               //Arrange
               const doors= new Array(5).fill('#') as TState[]
 
-              const hd = new HundredDoors(doors)
+              const hd = new RevolvingDoors(doors)
 
               //Act
               
@@ -54,7 +55,7 @@ describe("Doors",()=>{
               //Arrange
               const doors= new Array(5).fill('@') as TState[]
 
-              const hd = new HundredDoors(doors)
+              const hd = new RevolvingDoors(doors)
 
               //Act
               
@@ -78,7 +79,7 @@ describe("Doors",()=>{
               //Arrange
               const doors= new Array(5).fill('#') as TState[]
 
-              const hd = new HundredDoors(doors)
+              const hd = new RevolvingDoors(doors)
 
               //Act
               hd.makePasses(2)
@@ -96,7 +97,7 @@ describe("Doors",()=>{
               //Arrange
               const doors= new Array(4).fill('#') as TState[]
 
-              const hd = new HundredDoors(doors)
+              const hd = new RevolvingDoors(doors)
 
               //Act
               hd.makePasses(3)
