@@ -37,10 +37,11 @@ describe("Doors",()=>{
 
               //Act
               
-
+              hd.flipEvery(1)
 
               //Assert
-                 
+              
+              expect(hd.getDoors()).toStrictEqual(new Array(100).fill('@') )
 
           })
 
