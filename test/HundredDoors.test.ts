@@ -93,7 +93,7 @@ describe("Doors",()=>{
             it('should have all odd even doors closed `#` and odd doors open`@`',()=>{
                 
               //Arrange
-              const doors= new Array(3).fill('#') as string[]
+              const doors= new Array(4).fill('#') as string[]
 
               const hd = new HundredDoors(doors)
 
