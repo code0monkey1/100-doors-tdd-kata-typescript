@@ -63,7 +63,7 @@ describe("Doors",()=>{
 
           //     const solution = new Array(5).fill('@').splice(1)
               
-              expect(hd.getDoors()).toStrictEqual(["@","#","@","#"])
+              expect(hd.getDoors()).toStrictEqual(["@","H","@","H"])
 
           })
 
