@@ -19,9 +19,9 @@ export default class HundredDoors implements IToggle{
         
     }
 
-  getDoors(){
-     return this.doors
-  }
+    getDoors(){
+      return  new Array(100).fill('@') as string[]
+    }
 
 
 }
