@@ -1,7 +1,7 @@
 import IToggle from "./IToggle";
 
 export default class HundredDoors implements IToggle{
-  
+
   constructor(private  doors:string[]){}
 
    toggle(index:number): void {
