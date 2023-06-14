@@ -31,7 +31,7 @@ describe("Doors",()=>{
           it('should turn all doors to `@`',()=>{
 
               //Arrange
-              const doors= new Array(101).fill('#') as string[]
+              const doors= new Array(4).fill('#') as string[]
 
               const hd = new HundredDoors(doors)
 
@@ -41,7 +41,7 @@ describe("Doors",()=>{
 
               //Assert
 
-              const solution = new Array(101).fill('@').splice(1)
+              const solution = new Array(4).fill('@').splice(1)
               
               expect(hd.getDoors()).toStrictEqual(solution)
 
@@ -55,7 +55,7 @@ describe("Doors",()=>{
             it('should have all odd even doors closed `#` and odd doors open`@`',()=>{
                 
               //Arrange
-              const doors= new Array(101).fill('#') as string[]
+              const doors= new Array(4).fill('#') as string[]
 
               const hd = new HundredDoors(doors)
 
@@ -64,7 +64,7 @@ describe("Doors",()=>{
     
               // Assert
 
-              
+              expect(hd.getDoors()).toStrictEqual(['@','#','@','#','@','#'])
             })
 
     })

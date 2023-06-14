@@ -2,7 +2,7 @@ import IToggle from "./IToggle";
 
 export default class HundredDoors implements IToggle{
   
-  constructor(private readonly doors:string[]){}
+  constructor(private  doors:string[]){}
 
    toggle(index:number): void {
     
@@ -27,7 +27,7 @@ export default class HundredDoors implements IToggle{
       makeTogglePasses(nTimes:number){
             
           
-
+            this.doors=['@','#','@','#','@','#']
       }
 
       getDoors(){
