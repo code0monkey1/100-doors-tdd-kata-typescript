@@ -48,6 +48,26 @@ describe("Doors",()=>{
           })
 
 
+            it('should turn every 2nd  doors to `@`',()=>{
+
+              //Arrange
+              const doors= new Array(5).fill('#') as string[]
+
+              const hd = new HundredDoors(doors)
+
+              //Act
+              
+              hd.toggleEvery(2)
+
+              //Assert
+
+          //     const solution = new Array(5).fill('@').splice(1)
+              
+              expect(hd.getDoors()).toStrictEqual(["@","#","@","#"])
+
+          })
+
+
     })
 
     describe('double pass',()=>{
