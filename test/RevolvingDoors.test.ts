@@ -8,9 +8,7 @@ describe("RevolvingDoors",()=>{
          
          it('should be defined',()=>{
 
-          const doors=new Array(100).fill('#')  as TState[]
-
-           const hd = new RevolvingDoors(doors)
+           const hd = getRDwithDoors(101,'#')
  
            expect(hd).toBeDefined()
 
@@ -18,9 +16,8 @@ describe("RevolvingDoors",()=>{
 
          it('should have a `toggle` function to flip the state of a door',()=>{
 
-              const doors= new Array(100).fill('#') as TState[]
 
-              const hd = new RevolvingDoors(doors)
+              const hd = getRDwithDoors(101,'#')
 
               expect(hd.toggle).toBeInstanceOf(Function)
          })
