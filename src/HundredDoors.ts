@@ -5,7 +5,8 @@ export default class HundredDoors implements IToggle{
   constructor(private  doors:string[]){}
 
    toggle(index:number): void {
-    
+
+   
         const currentState= this.doors[index]
 
         if(currentState==='#'){
@@ -40,6 +41,17 @@ export default class HundredDoors implements IToggle{
 
       getDoors(){
         return  this.doors.slice(1)
+      }
+
+      getNextState(curr:string):string{
+
+        const nextState = new Map()
+
+        nextState.set('#',"H")
+        nextState.set('H',"@")
+        nextState.set('@',"#")
+
+         return nextState.get(curr)
       }
 
 
