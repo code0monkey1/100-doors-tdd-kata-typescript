@@ -17,14 +17,15 @@ export default class HundredDoors implements IToggle{
     toggleEvery(nthDoor:number){
 
        
-      //  for(let i=0;i<this.doors.length;i+=nthDoor-1){
-
-      //  }
+       for(let i=1;i<this.doors.length;i+=nthDoor){
+           
+               this.toggle(i)
+       }
         
     }
 
     getDoors(){
-      return  new Array(100).fill('@') as string[]
+      return  this.doors.slice(1)
     }
 
 
