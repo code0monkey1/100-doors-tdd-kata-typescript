@@ -17,7 +17,7 @@ export default class HundredDoors implements IToggle{
     toggleEvery(nthDoor:number){
 
        
-       for(let i=1;i<this.doors.length;i+=nthDoor){
+       for(let i=nthDoor;i<this.doors.length;i+=nthDoor){
            
                this.toggle(i)
        }
@@ -27,11 +27,11 @@ export default class HundredDoors implements IToggle{
       makePasses(nTimes:number){
             
           
-            for(let pass=1; pass<=nTimes;pass++){
+            // for(let pass=1; pass<=nTimes;pass++){
 
-              this.toggleEvery(pass)
+            //    this.toggleEvery(pass)
 
-            }
+            // }
       
       }
 
