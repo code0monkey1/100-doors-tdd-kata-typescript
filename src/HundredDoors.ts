@@ -11,6 +11,9 @@ export default class HundredDoors implements IToggle{
         if(currentState==='#'){
           this.doors[index]='@'
         }
+        else{
+          this.doors[index]="#"
+        }
         
     }
 
