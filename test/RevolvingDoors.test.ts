@@ -1,7 +1,7 @@
 import RevolvingDoors from "../src/RevolvingDoors"
 import { TState } from "../src/types"
 
-describe("Doors",()=>{
+describe("RevolvingDoors",()=>{
      
     
     describe('', () => {
