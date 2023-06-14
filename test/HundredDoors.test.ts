@@ -48,10 +48,10 @@ describe("Doors",()=>{
           })
 
 
-            it('should turn every 2nd  doors to `@`',()=>{
+            it('should turn every 2nd  doors to `#`',()=>{
 
               //Arrange
-              const doors= new Array(5).fill('#') as string[]
+              const doors= new Array(5).fill('@')
 
               const hd = new HundredDoors(doors)
 
