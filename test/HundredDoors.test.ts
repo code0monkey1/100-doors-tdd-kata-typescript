@@ -28,7 +28,11 @@ describe("Doors",()=>{
     describe('single pass',()=>{
 
 
-          it('should turn all')
+          it('should turn all doors to `@`',()=>{
+              
+                 
+
+          })
 
 
     })
