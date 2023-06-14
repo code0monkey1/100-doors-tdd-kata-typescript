@@ -31,7 +31,7 @@ describe("Doors",()=>{
           it('should turn all doors to `@`',()=>{
 
               //Arrange
-              const doors= new Array(100).fill('#') as string[]
+              const doors= new Array(101).fill('#') as string[]
 
               const hd = new HundredDoors(doors)
 
@@ -41,7 +41,7 @@ describe("Doors",()=>{
 
               //Assert
               
-              expect(hd.getDoors()).toStrictEqual(new Array(100).fill('@') )
+              expect(hd.getDoors()).toStrictEqual(new Array(101).fill('@') )
 
           })
 
