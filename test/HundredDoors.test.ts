@@ -1,4 +1,4 @@
-import HundredDoors from "../src/HundredDoors"
+import HundredDoors from "../src/RevolvingDoors"
 import { TState } from "../src/types"
 
 describe("Doors",()=>{
