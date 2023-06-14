@@ -40,8 +40,10 @@ describe("Doors",()=>{
               hd.flipEvery(1)
 
               //Assert
+
+              const solution = new Array(101).fill('@').splice(1)
               
-              expect(hd.getDoors()).toStrictEqual(new Array(101).fill('@') )
+              expect(hd.getDoors().splice(0)).toStrictEqual(solution)
 
           })
 
