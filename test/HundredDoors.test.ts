@@ -98,11 +98,11 @@ describe("Doors",()=>{
               const hd = new HundredDoors(doors)
 
               //Act
-              hd.makePasses(6)
+              hd.makePasses(100)
     
               // Assert
               expect(hd.getDoors())
-              .toStrictEqual(['@','@','#','#','@','@','#','#'])
+              .toStrictEqual(['@','@','#','#','@','@'])
             })
 
     })
