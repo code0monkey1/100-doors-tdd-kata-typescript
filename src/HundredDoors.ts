@@ -43,16 +43,6 @@ export default class HundredDoors implements IToggle{
         return  this.doors.slice(1)
       }
 
-      getNextState(curr:string):string{
-
-        const nextState = new Map()
-
-        nextState.set('#',"H")
-        nextState.set('H',"@")
-        nextState.set('@',"#")
-
-        return nextState.get(curr)
-      }
 
 
 }
