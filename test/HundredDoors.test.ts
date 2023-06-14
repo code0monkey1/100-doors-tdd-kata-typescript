@@ -72,7 +72,7 @@ describe("Doors",()=>{
 
     describe('double pass',()=>{
 
-            it('should have all odd even doors closed `#` and odd doors open`@`',()=>{
+            it('should have all odd even doors closed `H` and odd doors open`@`',()=>{
                 
               //Arrange
               const doors= new Array(5).fill('#') as string[]
@@ -83,14 +83,14 @@ describe("Doors",()=>{
               hd.makePasses(2)
     
               // Assert
-              expect(hd.getDoors()).toStrictEqual(['@','#','@','#'])
+              expect(hd.getDoors()).toStrictEqual(['@','H','@','H'])
             })
 
     })
 
        describe('3rd pass',()=>{
 
-            it('should have all odd even doors closed `#` and odd doors open`@`',()=>{
+            it('should have 2nd and 3rd door to holding state',()=>{
                 
               //Arrange
               const doors= new Array(4).fill('#') as string[]
@@ -102,7 +102,7 @@ describe("Doors",()=>{
     
               // Assert
               expect(hd.getDoors())
-              .toStrictEqual(['@','#','#'])
+              .toStrictEqual(['@','H','H'])
               
             })
 
