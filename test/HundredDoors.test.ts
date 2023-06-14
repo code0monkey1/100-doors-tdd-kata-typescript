@@ -37,13 +37,13 @@ describe("Doors",()=>{
 
               //Act
               
-              hd.flipEvery(1)
+              hd.toggleEvery(1)
 
               //Assert
 
               const solution = new Array(101).fill('@').splice(1)
               
-              expect(hd.getDoors().splice(0)).toStrictEqual(solution)
+              expect(hd.getDoors()).toStrictEqual(solution)
 
           })
 

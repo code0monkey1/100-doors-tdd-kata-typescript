@@ -14,8 +14,12 @@ export default class HundredDoors implements IToggle{
         
     }
 
-    flipEvery(nthDoor:number){
-      
+    toggleEvery(nthDoor:number){
+
+       
+      //  for(let i=0;i<this.doors.length;i+=nthDoor-1){
+
+      //  }
         
     }
 
