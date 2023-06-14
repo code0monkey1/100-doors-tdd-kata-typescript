@@ -1,12 +1,11 @@
 import IToggle from "./IToggle";
-
-type TState = '@'|'H'|'#'
+import { TState } from "./types";
 
 export default class HundredDoors implements IToggle{
 
-  constructor(private readonly doors:TState[]){}
+   constructor(private readonly doors:TState[]){}
 
-   toggle(index:number): void {
+    toggle(index:number): void {
 
    
         const currentState= this.doors[index]
