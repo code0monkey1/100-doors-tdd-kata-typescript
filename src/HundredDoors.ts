@@ -51,7 +51,7 @@ export default class HundredDoors implements IToggle{
         nextState.set('H',"@")
         nextState.set('@',"#")
 
-         return nextState.get(curr)
+        return nextState.get(curr)
       }
 
 
