@@ -24,9 +24,15 @@ export default class HundredDoors implements IToggle{
         
     }
 
-    getDoors(){
-      return  this.doors.slice(1)
-    }
+      makeTogglePasses(nTimes:number){
+            
+          
+
+      }
+
+      getDoors(){
+        return  this.doors.slice(1)
+      }
 
 
 }

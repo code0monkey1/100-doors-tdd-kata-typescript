@@ -49,6 +49,25 @@ describe("Doors",()=>{
 
 
     })
+
+    describe('double pass',()=>{
+
+            it('should have all odd even doors closed `#` and odd doors open`@`',()=>{
+                
+              //Arrange
+              const doors= new Array(101).fill('#') as string[]
+
+              const hd = new HundredDoors(doors)
+
+              //Act
+              hd.makeTogglePasses(2)
+    
+              // Assert
+
+              
+            })
+
+    })
     
         
 })
