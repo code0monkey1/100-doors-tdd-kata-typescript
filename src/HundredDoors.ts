@@ -2,19 +2,14 @@ import IToggle from "./IToggle";
 
 export default class HundredDoors implements IToggle{
 
-  constructor(private  doors:string[]){}
+  constructor(private readonly doors:string[]){}
 
    toggle(index:number): void {
 
    
         const currentState= this.doors[index]
 
-        if(currentState==='#'){
-          this.doors[index]='@'
-        }
-        else{
-          this.doors[index]="#"
-        }
+        this.doors[index]=this.getNextState(currentState) as string
         
     }
 
@@ -43,6 +38,17 @@ export default class HundredDoors implements IToggle{
         return  this.doors.slice(1)
       }
 
+     public  getNextState(curr:string):string|void{
+
+        const nextState = new Map<string, string>([
+          
+          ['#', '@'],
+          ['@', '#']
+  
+        ]);
+
+        return nextState.get(curr)
+      }
 
 
 }
