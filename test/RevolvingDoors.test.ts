@@ -42,7 +42,6 @@ describe("RevolvingDoors",()=>{
               const solution = new Array(5).fill('@').splice(1) as TState[]
               
               expect(hd.getDoors()).toStrictEqual(solution)
-
           })
 
 
@@ -58,7 +57,6 @@ describe("RevolvingDoors",()=>{
 
               //Assert
               expect(hd.getDoors()).toStrictEqual(["@","H","@","H"])
-
           })
 
 
@@ -97,8 +95,6 @@ describe("RevolvingDoors",()=>{
             })
 
     })
-    
-    
         
 })
 
