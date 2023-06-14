@@ -55,7 +55,7 @@ describe("Doors",()=>{
               //Arrange
               const doors= new Array(5).fill('@') as TState[]
 
-              const hd = getRDwithDoors(5)
+              const hd = getRDwithDoors(5)("@")
 
               //Act
               
@@ -74,7 +74,7 @@ describe("Doors",()=>{
             it('should have all odd even doors closed `H` and odd doors open`@`',()=>{
                 
               //Arrange
-               const rd = getRDwithDoors(5)
+               const rd = getRDwithDoors(5)("#")
 
               //Act
               rd.makePasses(2)
@@ -90,7 +90,7 @@ describe("Doors",()=>{
             it('should have 2nd and 3rd door to holding state',()=>{
                 
               //Arrange
-              const rd = getRDwithDoors(4)
+              const rd = getRDwithDoors(4)('#')
 
               //Act
               rd.makePasses(3)
@@ -108,9 +108,11 @@ describe("Doors",()=>{
 })
 
 function getRDwithDoors(count:number) {
-     
-     const doors = new Array(count).fill('#') as TState[]
+      
+     return (char:string)=>{
+          const doors = new Array(count).fill(char) as TState[]
 
-     const hd = new RevolvingDoors(doors)
-     return hd
+          const hd = new RevolvingDoors(doors)
+          return hd
+     }
 }
