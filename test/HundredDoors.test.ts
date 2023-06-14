@@ -60,7 +60,7 @@ describe("Doors",()=>{
               const hd = new HundredDoors(doors)
 
               //Act
-              hd.makeTogglePasses(2)
+              hd.makePasses(2)
     
               // Assert
 

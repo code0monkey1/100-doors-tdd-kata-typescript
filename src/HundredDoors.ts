@@ -24,10 +24,15 @@ export default class HundredDoors implements IToggle{
         
     }
 
-      makeTogglePasses(nTimes:number){
+      makePasses(nTimes:number){
             
           
-            this.doors=['@','#','@','#','@','#']
+            for(let pass=1; pass<=nTimes;pass++){
+
+              this.toggleEvery(pass)
+
+            }
+      
       }
 
       getDoors(){
