@@ -29,7 +29,17 @@ describe("Doors",()=>{
 
 
           it('should turn all doors to `@`',()=>{
+
+              //Arrange
+              const doors= new Array(100).fill('#') as string[]
+
+              const hd = new HundredDoors(doors)
+
+              //Act
               
+
+
+              //Assert
                  
 
           })
