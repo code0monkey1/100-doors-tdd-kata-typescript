@@ -88,21 +88,21 @@ describe("Doors",()=>{
 
     })
 
-       describe('6th pass',()=>{
+       describe('3rd pass',()=>{
 
             it('should have all odd even doors closed `#` and odd doors open`@`',()=>{
                 
               //Arrange
-              const doors= new Array(9).fill('#') as string[]
+              const doors= new Array(3).fill('#') as string[]
 
               const hd = new HundredDoors(doors)
 
               //Act
-              hd.makePasses(100)
+              hd.makePasses(3)
     
               // Assert
               expect(hd.getDoors())
-              .toStrictEqual(['@','@','#','#','@','@'])
+              .toStrictEqual(['@','#','#'])
             })
 
     })
